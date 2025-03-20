@@ -1,63 +1,87 @@
-// sum – 2 parameters: a and b. return value should be the sum of both
+// function sum(a, b) {
+//   return a + b;
+// }
 
-// subtract - 2 parameters: a and b. return value is a subtracted by b
+// function subtract(a, b) {
+//   return a - b;
+// }
 
-// multiply - 2 parameters: a and b. return value is a multiplied by b
+// function multiply(a, b) {
+//   return b * a;
+// }
 
-// divide - 2 parameters: a and b. return value is a divided by b
+// function divide(a, b) {
+//   return a / b;
+// }
 
-// calculate – 3 parameters: a, b and action.
+// function calculate(a, b, action) {
+//   return action(a, b);
+// }
 
-// Action should be “sum”, “subtract”,”multiply” or “divide”, according to
-// the action parameter call the relevant function with a and b
+// const array = [
+//   {
+//     a: 18,
+//     b: 3,
+//     calculate: sum,
+//   },
+//   {
+//     a: 18,
+//     b: 3,
+//     calculate: subtract,
+//   },
+//   {
+//     a: 18,
+//     b: 3,
+//     calculate: multiply,
+//   },
+//   {
+//     a: 18,
+//     b: 3,
+//     calculate: divide,
+//   },
+// ];
 
-// Add an array of objects with keys a, b and calculate, and iterate over
-// it calculating each item in the array using ”calculate” function and
-// print the result
+// for (const obj of array) {
+//   console.log(calculate(obj.a, obj.b, obj.calculate));
+// }
 
-function sum(a, b) {
-  return a + b;
+function reverseNumber(number) {
+  let newNumber = "";
+  const array = String(number).split("");
+  for (let i = array.length - 1; i >= 0; i--) {
+    newNumber += array[i];
+  }
+  console.log(Number(newNumber));
 }
 
-function subtract(a, b) {
-  return a - b;
-}
+reverseNumber(1234567);
 
-function multiply(a, b) {
-  return b * a;
-}
+// function capitalizeFirstLetter(text) {
+//   let newString = "";
+//   const array = text.split(" ");
+//   for (const word of array) {
+//     // const arr = word.split("");
+//     // arr[0] = arr[0].toUpperCase();
+//     // newString += arr.join("") + " ";
 
-function divide(a, b) {
-  return a / b;
-}
+//     const newWord = word.charAt(0).toUpperCase() + word.slice(1);
+//     newString += newWord + " ";
+//   }
 
-function calculate(a, b, action) {
-  return action(a, b);
-}
+//   console.log(newString.trim());
+// }
 
-const array = [
-  {
-    a: 18,
-    b: 3,
-    calculate: sum,
-  },
-  {
-    a: 18,
-    b: 3,
-    calculate: subtract,
-  },
-  {
-    a: 18,
-    b: 3,
-    calculate: multiply,
-  },
-  {
-    a: 18,
-    b: 3,
-    calculate: divide,
-  },
-];
+// function capitalizeFirstLetter(text) {
+//   const array = text.split(" ");
+//   let newArray = [];
+//   for (const word of array) {
+//     const arr = word.split("");
+//     arr[0] = arr[0].toUpperCase();
 
-for (const obj of array) {
-  console.log(calculate(obj.a, obj.b, obj.calculate));
-}
+//     newArray.push(arr.join(""));
+//   }
+
+//   console.log(newArray.join(" "));
+// }
+
+capitalizeFirstLetter("the brown fox");
